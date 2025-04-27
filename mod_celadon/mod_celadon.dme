@@ -91,6 +91,7 @@
 // --- RETURNS --- //
 #include "return_content_clowns/_return_content_clowns.dme"
 #include "return_content_crusher_trophy/_return_content_crusher_trophy.dme"
+#include "return_combat_shotgun/_return_combat_shotgun.dme"
 #include "return_content_ipc/_return_content_ipc.dme"
 #include "return_content_spawn/_return_content_spawn.dme"
 
@@ -101,11 +102,11 @@
 #include "maps/_configs.dme"
 
 // --- OUTFIT --- //
-#include "outfit\_outfit.dme"
+#include "outfit/_outfit.dme"
 
 // --- ПОСЛЕДНЯЯ ИНСТАНЦИЯ (BALANCE) --- //
 // Тут собраны модпаки, что будут применяться на все и вся. Поэтому они собраны тут
-#include "economy\_economy.dme"
+#include "economy/_economy.dme"
 
 
 

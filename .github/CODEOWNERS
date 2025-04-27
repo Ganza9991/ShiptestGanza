@@ -10,7 +10,11 @@
 
 # Vairkharst
 
-* @Vairkharst
+/**/* @Vairkharst
+/**/*.dm @Vairkharst
+/**/*.ogg @Vairkharst
+/**/*.mp3 @Vairkharst
+/**/*.dmi @Vairkharst
 
 # Code Maintainers
 
@@ -57,4 +61,3 @@
 
 
 # CONTRIBUTORS
-
