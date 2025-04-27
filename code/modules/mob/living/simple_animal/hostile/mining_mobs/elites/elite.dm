@@ -1,3 +1,7 @@
+
+// EVERYTHING HERE WAS TRANSFERED IN mod_celadon\legionunited\code\elite.dm DUE TO place_github_pr_here
+
+
 #define TUMOR_INACTIVE 0
 #define TUMOR_ACTIVE 1
 #define TUMOR_PASSIVE 2
@@ -436,6 +440,8 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	else
 		to_chat(user, span_info("[src] only works on the corpse of a sentient lavaland elite."))
 
+// ===================== Arena wall =====================
+
 /obj/effect/temp_visual/elite_tumor_wall
 	name = "magic wall"
 	icon = 'icons/turf/walls/hierophant_wall_temp.dmi'
@@ -469,11 +475,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/effect/temp_visual/elite_tumor_wall/CanAllowThrough(atom/movable/mover, border_dir)
 	. = ..()
-	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
-	// if(mover == ourelite || mover == activator)
-	// 	return FALSE	// CELADON-EDIT - ORIGINAL
 	return FALSE
-	// [/CELADON-EDIT]
 
 // [CELADON-ADD] - CELADON_BALANCE_MOBS
 #undef TUMOR_ACTIVE

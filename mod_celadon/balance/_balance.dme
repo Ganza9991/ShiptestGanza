@@ -14,7 +14,6 @@
 #include "code/cc_clothes.dm"
 #include "code/chemestry.dm"	// От ганзы не включенный файл
 #include "code/sharplite_balance.dm"
-#include "code/elite.dm"
 #include "code/energy.dm"
 #include "code/gloves.dm"
 #include "code/gun.dm"
