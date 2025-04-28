@@ -1,5 +1,14 @@
-/////////////////Juggernaut///////////////
-/mob/living/simple_animal/hostile/construct/juggernaut/wizard
+// =================  =================
+// MARK: TEMPLATE
+/mob/living/simple_animal/hostile/pandora_horrors
+	name = "Unimaginable thing"
+	desc = "Try to imagine it."
+
+
+// ================= Juggernaut =================
+// MARK: JUGGERNAUT
+
+/mob/living/simple_animal/hostile/pandora_horrors/juggernaut
 	name = "Juggernaut"
 	real_name = "Juggernaut"
 	desc = "A massive, purple glowing armored construct built to spearhead attacks and soak up enemy fire."
@@ -26,7 +35,6 @@
 	status_flags = 0
 	mob_size = MOB_SIZE_LARGE
 	force_threshold = 10
-	glowtheme = "wizard"
 	// construct_spells = list(/obj/effect/proc_holder/spell/targeted/forcewall/,
 	// 						/obj/effect/proc_holder/spell/targeted/projectile/dumbfire/juggernaut)
 	// runetype = /datum/action/innate/cult/create_rune/wall
@@ -44,8 +52,10 @@
 /mob/living/simple_animal/hostile/construct/juggernaut/wizard/bullet_act(obj/projectile/P)
 	. = ..()
 
-////////////////////////Wraith/////////////////////////////////////////////
-/mob/living/simple_animal/hostile/construct/wraith/wizard
+// ================= Wraith =================
+// MARK: WRAITH
+
+/mob/living/simple_animal/hostile/pandora_horrors/wraith
 	name = "Wraith"
 	real_name = "Wraith"
 	desc = "A wicked, clawed shell constructed to assassinate enemies and sow chaos behind enemy lines."
@@ -67,7 +77,6 @@
 	// construct_spells = list(/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift)
 	// runetype = /datum/action/innate/cult/create_rune/tele
 	// playstyle_string = "<b>You are a Wraith. Though relatively fragile, you are fast, deadly, can phase through walls, and your attacks will lower the cooldown on phasing.</b>"
-	glowtheme = "wizard"
 
 /mob/living/simple_animal/hostile/construct/wraith/wizard/Initialize()
 	. = ..()
@@ -125,8 +134,10 @@
 	jaunt_in_type = /obj/effect/temp_visual/dir_setting/wraith/wizard
 	jaunt_out_type = /obj/effect/temp_visual/dir_setting/wraith/wizard/out
 
-/////////////////////////////Artificer/////////////////////////
-/mob/living/simple_animal/hostile/construct/artificer/wizard
+// ================= Artificer =================
+// MARK: ARTIFICER
+
+/mob/living/simple_animal/hostile/pandora_horrors/artificer
 	name = "Artificer"
 	real_name = "Artificer"
 	desc = "A bulbous construct dedicated to building and maintaining the Cult of Nar'Sie's armies."
@@ -149,7 +160,6 @@
 	attack_verb_simple = "ram"
 	environment_smash = ENVIRONMENT_SMASH_WALLS
 	attack_sound = 'sound/weapons/punch2.ogg'
-	glowtheme = "wizard"
 	// construct_spells = list(/obj/effect/proc_holder/spell/aoe_turf/conjure/wall,
 	// 						/obj/effect/proc_holder/spell/aoe_turf/conjure/floor,
 	// 						/obj/effect/proc_holder/spell/aoe_turf/conjure/soulstone,
@@ -167,8 +177,10 @@
 	AIStatus = AI_ON
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES //only token destruction, don't smash the cult wall NO STOP
 
-/////////////////////////////Harvester/////////////////////////
-/mob/living/simple_animal/hostile/construct/harvester/wizard
+// ================= Harvester =================
+// MARK: HARVESTER
+
+/mob/living/simple_animal/hostile/pandora_horrors/harvester
 	name = "Harvester"
 	real_name = "Harvester"
 	desc = "A long, thin construct built to herald Nar'Sie's rise. It'll be all over soon."
@@ -185,7 +197,6 @@
 	attack_verb_continuous = "butchers"
 	attack_verb_simple = "butcher"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	glowtheme = "wizard"
 	// construct_spells = list(/obj/effect/proc_holder/spell/aoe_turf/area_conversion,
 	// 						/obj/effect/proc_holder/spell/targeted/forcewall/cult)
 	// playstyle_string = "<B>You are a Harvester. You are incapable of directly killing humans, but your attacks will remove their limbs:
