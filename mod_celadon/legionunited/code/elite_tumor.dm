@@ -2,7 +2,9 @@
 #define TUMOR_ACTIVE 1
 #define TUMOR_PASSIVE 2
 
+// ================= Elite Tumor =================
 //The Pulsing Tumor, the actual "spawn-point" of elites, handles the spawning, arena, and procs for dealing with basic scenarios.
+// MARK: TUMOR
 
 /obj/structure/elite_tumor
 	name = "pulsing tumor"

@@ -1,5 +1,5 @@
 
-// EVERYTHING HERE WAS TRANSFERED IN mod_celadon\legionunited\code\elite.dm DUE TO place_github_pr_here
+// EVERYTHING HERE AND ALL ELITES WAS TRANSFERED IN mod_celadon\legionunited\code\elite.dm DUE TO place_github_pr_here
 
 
 #define TUMOR_INACTIVE 0
