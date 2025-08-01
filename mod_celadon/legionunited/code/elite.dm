@@ -3,7 +3,7 @@
 	name = "elite"
 	desc = "An elite monster, found in one of the strange tumors on lavaland."
 	icon = 'icons/mob/lavaland/lavaland_elites.dmi'
-	faction = list("elitefauna")
+	faction = list("hostile", "elitefauna")
 	maxHealth = 400
 	health = 400
 	robust_searching = TRUE
@@ -21,9 +21,14 @@
 	var/list/attack_action_types = list()
 	var/can_talk = FALSE
 	var/obj/loot_drop = null
+	var/hp_state = 0 // Every 25% = hp_state++
 
 	/// From what tumor we hatched
 	var/obj/structure/elite_tumor/tumor
+
+/mob/living/simple_animal/hostile/asteroid/elite/update_stat()
+	. = ..()
+	hp_state = round(health / maxHealth, 0.25) / 0.25 // Every 25% = hp_state++
 
 //Gives player-controlled variants the ability to swap attacks
 /mob/living/simple_animal/hostile/asteroid/elite/Initialize(mapload)

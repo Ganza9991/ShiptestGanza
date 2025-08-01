@@ -8,7 +8,7 @@
 
 /obj/structure/elite_tumor
 	name = "pulsing tumor"
-	desc = "An odd, pulsing tumor sticking out of the ground.  You feel compelled to reach out and touch it..."
+	desc = "An odd, pulsing tumor sticking out of the ground. You feel compelled to reach out and touch it..."
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	resistance_flags = INDESTRUCTIBLE
 	icon = 'mod_celadon/_storge_icons/icons/obj/tumor.dmi'
@@ -33,6 +33,7 @@
 
 	var/list/arena_walls = list()
 	var/arena_range = 10
+	var/list/power_ups = list()
 
 /obj/structure/elite_tumor/attack_hand(mob/user)
 	. = ..()
@@ -119,47 +120,17 @@
 		var/obj/item/gem/gem = I
 		doom = TRUE
 		light_range = 6
-		switch(gem.type)
-			if(/obj/item/gem/phoron)
-				potentialspawns = list(/mob/living/simple_animal/hostile/megafauna/hierophant)
-				mfauna = "hierophant_"
-				// icon_state = "hierophant_tumor_passive"
-				// flick("hierophant_tumor_rise", src)
-				playsound(loc,'sound/magic/blind.ogg', 150, 0, 50, TRUE, TRUE)
-				desc = "[desc] Around it appears to be glowing purple squares."
-				visible_message("<span class='boldwarning'>As [user] drops the [gem] into [src], purple glowing shapes appears around [src].</span>")
-			if(/obj/item/gem/bloodstone)
-				potentialspawns = list(/mob/living/simple_animal/hostile/megafauna/bubblegum)
-				mfauna = "bubblegum_"
-				icon_state = "bubblegum_tumor_passive"
-				flick("bubblegum_tumor_rise", src)
-				playsound(loc,'sound/magic/blind.ogg', 150, 0, 50, TRUE, TRUE)
-				desc = "[desc] This one seems to be soaked with red blood."
-				visible_message("<span class='boldwarning'>As [user] drops the [gem] into [src], a burst of blood coming out.</span>")
-			if(/obj/item/gem/rupee)
-				potentialspawns = list(/mob/living/simple_animal/hostile/megafauna/colossus)
-				mfauna = "colossus_"
-				icon_state = "colossus_tumor_passive"
-				flick("colossus_tumor_rise", src)
-				playsound(loc,'sound/weapons/pierce_slow.ogg', 150, 0, 50, TRUE, TRUE)
-				desc = "[desc] There is a spikes around it."
-				visible_message("<span class='boldwarning'>As [user] drops the [gem] into [src], a small metal spikes starts to rise around it.</span>")
-			if(/obj/item/gem/amber)
-				potentialspawns = list(/mob/living/simple_animal/hostile/megafauna/dragon)
-				mfauna = "dragon_"
-				// icon_state = "dragon_tumor_passive"
-				// flick("dragon_tumor_rise", src)
-				playsound(loc,'sound/creatures/legion_death_far.ogg', 50, 0, 50, TRUE, TRUE)
-				desc = "[desc] A black fog coming from within."
-				visible_message("<span class='boldwarning'>As [user] drops the [gem] into [src], a distant growl comes from within.</span>")
-			if(/obj/item/gem/void)
+		switch(gem.type) // Кидая гем в опухоль, она лочится за определённой элиткой (которая закреплена за гемом), которая становится сильнее, получая новую механику в бою
+			if(/obj/item/gem/phoron) // Магия, фиолетовый
+				potentialspawns = list(/mob/living/simple_animal/hostile/asteroid/elite/pandora)
+			if(/obj/item/gem/bloodstone) // Кровь, красный
+				potentialspawns = list(/mob/living/simple_animal/hostile/asteroid/elite/herald)
+			if(/obj/item/gem/rupee) // Могущество, зеленый
+				potentialspawns = list(/mob/living/simple_animal/hostile/asteroid/elite/broodmother)
+			if(/obj/item/gem/amber) // Гордость, желтый
+				potentialspawns = list(/mob/living/simple_animal/hostile/asteroid/elite/legionnaire)
+			if(/obj/item/gem/void) // Бездна, синий
 				potentialspawns = list(/mob/living/simple_animal/hostile/megafauna/demonic_frost_miner)
-				mfauna = "dfminer_"
-				// icon_state = "demonfrostminer_tumor_passive"
-				// flick("demonfrostminer_tumor_rise", src)
-				playsound(loc,'sound/creatures/narsie_rises.ogg', 50, 0, 50, TRUE, TRUE)
-				desc = "An odd, pulsing tumor sticking out of the ground. You feel a strange feeling, that telling you to reach out and touch it... and run away as far as you can and cannot. Ice forms on and around it."
-				visible_message("<span class='boldwarning'>As [user] drops the [gem] into [src], it suddenly changes colors to void black, as a strange energy comes from within. You have awaken something terrible...</span>")
 		qdel(gem)
 
 // ================= Fighter Interaction =================
