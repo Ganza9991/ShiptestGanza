@@ -10,22 +10,20 @@
 	speech_span = SPAN_ITALICS
 	immortal = TRUE	// stationary and indefinite
 	immobile = TRUE
-	core = null
-	var/datum/proximity_monitor/advanced/brainmelter/bmelter
+	drops_core = FALSE
+	var/list/radar_group = list()
 
 /obj/effect/anomaly/radar/
 
 /obj/effect/anomaly/radar/proc/brain_melt_message()
-	var/chars = "/|\#"
-	var/length = rand(10,20)
+	var/chars = "/|*-#[]{}()+=_&^v<>%@"
 	var/result = ""
-	for(var/i in 1 to length)
-		var/random_pos = rand(1, chars.len)
+	for(var/i in 1 to rand(10,20))
+		var/random_pos = rand(1, length_char(chars))
 		result += copytext(chars, random_pos, random_pos + 1)
-	return result
+	return span_phobia(result)
 
-/datum/proximity_monitor/advanced/brainmelter
-
+/*
 
 /obj/effect/anomaly/radar/examine(mob/user)
 	. = ..()
@@ -35,37 +33,6 @@
 		var/mob/living/carbon/victim = user
 		to_chat(victim, span_userdanger("Your head aches as you stare into [src]!"))
 		victim.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5, 100)
-
-/obj/effect/anomaly/radar/anomalyEffect()
-	..()
-
-	var/turf/spot = locate(rand(src.x-effectrange, src.x+effectrange), rand(src.y-effectrange, src.y+effectrange), src.z)
-	new /obj/effect/particle_effect/staticball(spot)
-
-
-	if(!COOLDOWN_FINISHED(src, pulse_cooldown))
-		return
-
-	COOLDOWN_START(src, pulse_cooldown, pulse_delay)
-
-	for(var/mob/living/carbon/human/looking in range(effectrange, src))
-		playsound(src, 'sound/effects/walkietalkie.ogg', 75)
-		if(stored_mob && looking.stat != DEAD && prob(25))
-			say_fucky_things()
-		if(HAS_TRAIT(looking, TRAIT_MINDSHIELD) || looking.stat == DEAD || looking.research_scanner || HAS_TRAIT(looking, TRAIT_DEAF))
-			continue
-		looking.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10, 200)
-		playsound(src, 'sound/effects/stall.ogg', 50)
-		if(looking.getOrganLoss(ORGAN_SLOT_BRAIN) >= 150 && looking.stat != DEAD)
-			if(prob(20))
-				var/mob/living/carbon/victim = looking
-				var/obj/effect/anomaly/tvstatic/planetary/expansion
-				expansion = new(get_turf(victim))
-				visible_message(span_warning("[src] overtakes [victim], [expansion] taking their place!"))
-				victim.death()
-				expansion.stored_mob = victim
-				victim.forceMove(expansion)
-
 
 /obj/effect/anomaly/radar/Bumped(atom/movable/AM)
 	anomalyEffect()
@@ -97,3 +64,4 @@
 	playsound(src, "walkietalkie", 100, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	QDEL_IN(src, 20)
 
+*/

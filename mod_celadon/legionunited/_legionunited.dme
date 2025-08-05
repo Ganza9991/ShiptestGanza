@@ -20,4 +20,7 @@
 #include "code\pandora\pandora.dm"
 #include "code\pandora\pandora_horrors.dm"
 
+#include "code\anomaly\anomalies_radar.dm"
+
+#include "code\drill\drill.dm"
 // END_INCLUDE
