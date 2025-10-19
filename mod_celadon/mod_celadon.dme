@@ -1,6 +1,7 @@
 #include "_modpack.dm"
 #include "_modpacks.dm"
 
+#include "legionunited\_legionunited.dme"
 
 // Соблюдаем алфавитный порядок при добавлении путей!
 // Пример пути: #include "example/_example.dme"

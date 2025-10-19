@@ -1,0 +1,26 @@
+#ifndef MODPACK_CELADON_LEGIONUNITED
+#define MODPACK_CELADON_LEGIONUNITED
+#endif
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+// BEGIN_INCLUDE
+#include "_legionunited.dm"
+// #include "code\elite.dm"
+// #include "code\elite_set.dm"
+// #include "code\elite_tumor.dm"
+// #include "code\broodmother\broodmother.dm"
+// #include "code\herald.dm"
+// #include "code\legionnaire\legionnaire.dm"
+
+// #include "code\pandora\pandora.dm"
+// #include "code\pandora\pandora_horrors.dm"
+
+#include "code\anomaly\anomalies_radar.dm"
+
+#include "code\drill\drill.dm"
+// END_INCLUDE

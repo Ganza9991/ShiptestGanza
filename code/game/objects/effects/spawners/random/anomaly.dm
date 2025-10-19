@@ -17,6 +17,7 @@
 		/obj/effect/anomaly/phantom/planetary,
 		/obj/effect/anomaly/melter/planetary,
 		/obj/effect/anomaly/transfusion/planetary,
+		/obj/effect/anomaly/radar,
 	)
 
 /obj/effect/spawner/random/anomaly/safe
@@ -42,6 +43,7 @@
 		/obj/effect/anomaly/tvstatic/planetary,
 		/obj/effect/anomaly/plasmasoul/planetary,
 		/obj/effect/anomaly/melter/planetary,
+		/obj/effect/anomaly/radar,
 	)
 
 /obj/effect/spawner/random/anomaly/big
@@ -108,6 +110,7 @@
 		/obj/effect/anomaly/veins/planetary,
 		/obj/effect/anomaly/phantom/planetary,
 		/obj/effect/anomaly/melter/planetary,
+		/obj/effect/anomaly/radar,
 	)
 
 /obj/effect/spawner/random/anomaly/sand/cave
@@ -119,6 +122,7 @@
 		/obj/effect/anomaly/veins/planetary,
 		/obj/effect/anomaly/phantom/planetary,
 		/obj/effect/anomaly/melter/planetary,
+		/obj/effect/anomaly/radar,
 	)
 
 /obj/effect/spawner/random/anomaly/rock
@@ -138,6 +142,7 @@
 		/obj/effect/anomaly/plasmasoul/planetary,
 		/obj/effect/anomaly/phantom/planetary,
 		/obj/effect/anomaly/melter/planetary,
+		/obj/effect/anomaly/radar,
 	)
 
 /obj/effect/spawner/random/anomaly/rock/cave
@@ -151,6 +156,7 @@
 		/obj/effect/anomaly/plasmasoul/planetary,
 		/obj/effect/anomaly/phantom/planetary,
 		/obj/effect/anomaly/melter/planetary,
+		/obj/effect/anomaly/radar,
 	)
 
 /obj/effect/spawner/random/anomaly/lava
@@ -163,6 +169,7 @@
 		/obj/effect/anomaly/pyro/planetary,
 		/obj/effect/anomaly/vortex/planetary,
 		/obj/effect/anomaly/plasmasoul/planetary,
+		/obj/effect/anomaly/radar,
 	)
 
 /obj/effect/spawner/random/anomaly/lava/cave
